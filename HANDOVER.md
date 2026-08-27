@@ -11,7 +11,7 @@ It survives, with four things that had to be fixed first.
 **1. It was not in version control.** Serving production since 2026-08-19 with
 no repository. A site that is not in a repository cannot be handed to anyone, so
 handover was impossible for the one site that exists to demonstrate handover.
-Fixed: committed as-is, pushed to `maonakamoto/camille-boulangerie`.
+Fixed: committed as-is, pushed to `catomean/camille-boulangerie`.
 
 **2. It was not in the register.** Running on port 4020 behind a Caddy block,
 absent from `fleetcrown/scripts/hetzner/apps.conf`. Nothing would have told you
@@ -50,7 +50,7 @@ env var is a public URL. That is not luck — it is because deploy logic lives i
 2. **Rewrite any generated content** that is not the client's own.
 3. **Transfer the repository:**
    ```bash
-   gh api -X POST repos/maonakamoto/camille-boulangerie/transfer \
+   gh api -X POST repos/catomean/camille-boulangerie/transfer \
      -f new_owner='<their-github-username-or-org>'
    ```
    They accept, and it is theirs — history, issues and all.
