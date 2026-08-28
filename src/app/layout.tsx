@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Script from 'next/script';
 import { Cormorant_Garamond, DM_Sans } from 'next/font/google';
 import './globals.css';
 import { DemoBanner } from '@/components/DemoBanner';
@@ -35,6 +36,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="flex min-h-screen flex-col">
         <DemoBanner />
         {children}
+
+        {/* FleetCrown feedback widget — env-gated, see docs/architecture/feedback-widget.md */}
+        {process.env.NEXT_PUBLIC_FC_WIDGET_TOKEN && (
+          <Script
+            src="https://fleetcrown.orangecat.ch/widget.js"
+            strategy="afterInteractive"
+            data-fc-project={process.env.NEXT_PUBLIC_FC_WIDGET_TOKEN}
+          />
+        )}
       </body>
     </html>
   );
