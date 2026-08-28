@@ -1,28 +1,70 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+/* The renderers live in the sitekit package; Tailwind must scan them or
+   their semantic classes are never emitted. */
+@source '../../node_modules/sitekit/dist';
 
-@layer base {
-  html {
-    scroll-behavior: smooth;
-  }
-  body {
-    @apply bg-cream text-espresso antialiased;
-  }
+/**
+ * Camille's design tokens — the SSOT for every visual decision, implementing
+ * sitekit's class contract with this bakery's own values.
+ *
+ * Nothing here comes from the fleet: same token NAMES as every generated
+ * site, entirely different values. Warm cream surfaces, espresso ink, a
+ * terracotta accent, a French serif for display — a boulangerie, not a
+ * research firm, and definitely not a Bitcoin platform.
+ *
+ * Deliberately light-only: a bakery sells warmth and mornings. Committing to
+ * one expression is a design decision, not an omission.
+ */
+@theme {
+  --font-heading: var(--font-display), Georgia, 'Iowan Old Style', serif;
+  --font-sans: var(--font-body), system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: ui-monospace, 'SF Mono', Menlo, 'Cascadia Mono', monospace;
+
+  --tracking-display: -0.01em;
+  --tracking-caps: 0.12em;
+
+  --spacing-shell: 72rem;
+
+  /* Tier 1 — primitives. Not used directly by a component. */
+  --primitive-cream-50: #faf6f0;
+  --primitive-cream-100: #f0e8dc;
+  --primitive-espresso-900: #2c1810;
+  --primitive-espresso-600: #5c4030;
+  --primitive-espresso-400: #8a6a52;
+  --primitive-espresso-300: #a3866c;
+  --primitive-terracotta-500: #c45c3e;
+  --primitive-wheat-300: #e8d4a8;
+
+  /* Tier 2 — semantics. What components use, always. */
+  --color-surface-page: var(--primitive-cream-50);
+  --color-surface-raised: #ffffff;
+  --color-fg-primary: var(--primitive-espresso-900);
+  --color-fg-secondary: var(--primitive-espresso-600);
+  --color-fg-tertiary: var(--primitive-espresso-400);
+  --color-fg-muted: var(--primitive-espresso-300);
+  --color-border-subtle: #ecdfd0;
+  --color-border-strong: var(--primitive-wheat-300);
+  --color-accent: var(--primitive-terracotta-500);
+  --color-status-positive: #5a8a4c;
+  --color-status-warning: #b98a3c;
+  --color-status-negative: #b5564d;
 }
 
-@layer components {
-  .btn-primary {
-    @apply inline-flex items-center justify-center min-h-[44px] px-6 py-2.5 rounded-full
-      bg-terracotta text-white font-medium text-sm
-      hover:bg-terracotta-dark transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-terracotta;
-  }
-  .btn-outline {
-    @apply inline-flex items-center justify-center min-h-[44px] px-6 py-2.5 rounded-full
-      border-2 border-espresso/20 text-espresso font-medium text-sm
-      hover:border-terracotta hover:text-terracotta transition-colors;
-  }
-  .section-pad {
-    @apply px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto;
-  }
+html {
+  color-scheme: light;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-surface-page);
+  color: var(--color-fg-primary);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+.scrollbar-hide {
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
 }
