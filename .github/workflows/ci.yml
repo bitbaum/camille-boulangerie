@@ -41,15 +41,13 @@ jobs:
       # that drifts from it is exactly how a dependency silently disappears.
       - run: npm ci
 
-      - name: Type check
-        run: npm run type-check
+      # SSOT: "verified" is defined ONCE, in package.json `verify`
+      # (= type-check + lint + test). Lint is real now — the Next 16 upgrade
+      # this file's old comment was waiting for happened on 2026-08-28.
+      - name: Verify
+        run: npm run verify
 
-      # Lint deliberately omitted: this is Next 14 and `next lint` refuses to
-      # run here even with eslint installed. Type-check and build both pass and
-      # catch what matters. Fixing the lint quirk is worth doing when this site
-      # is upgraded to the fleet's Next 16 — not worth blocking CI on now, and
-      # NOT worth pretending is covered.
-      # The build is the real test for a content site: a broken import or a bad
-      # config surfaces here and nowhere earlier.
+      # The build is the real test for a content site: a broken import or a
+      # bad config surfaces here and nowhere earlier.
       - name: Build
         run: npm run build
