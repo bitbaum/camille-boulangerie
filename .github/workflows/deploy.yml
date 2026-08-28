@@ -1,0 +1,25 @@
+name: Deploy
+
+# Push to main → deploy to bitbaum. All logic lives in one place:
+# bitbaum/fleetcrown/.github/workflows/selfhost-deploy.yml
+#
+# THIS IS THE ONLY FILE IN THIS REPOSITORY THAT KNOWS ABOUT OUR INFRASTRUCTURE.
+# Delete it and this becomes an ordinary Next app the owner can host anywhere —
+# which is what makes handover a transfer rather than a migration.
+#
+# Added 2026-08-28: this repo shipped without one — the studio's own
+# fleet-wide CI/CD audit found it. It had CI (verify runs on every push) but
+# no CD, so a green push here never reached the box; the live site stayed on
+# whatever was last deployed by hand. "Green CI" and "deployed" look identical
+# from the outside until someone checks.
+on:
+  workflow_dispatch: {}
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    uses: bitbaum/fleetcrown/.github/workflows/selfhost-deploy.yml@main
+    with:
+      app: camille-boulangerie
+    secrets: inherit
