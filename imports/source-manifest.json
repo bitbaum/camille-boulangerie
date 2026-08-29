@@ -291,23 +291,13 @@
     }
   ],
   "contact": {
-    "emails": [
-      "info@juliette-boulangerie.ch"
-    ],
-    "phones": [
-      "+41 44 430 29 29",
-      "+41 44 430 29 28",
-      "+41 43 433 09 09",
-      "+41 44 721 30 00"
-    ],
+    "emails": ["info@juliette-boulangerie.ch"],
+    "phones": ["+41 44 430 29 29", "+41 44 430 29 28", "+41 43 433 09 09", "+41 44 721 30 00"],
     "addresses": []
   },
   "styleHints": {
     "primaryColor": "#D9D9D9",
-    "fontFamilies": [
-      "Roboto",
-      "inherit"
-    ]
+    "fontFamilies": ["Roboto", "inherit"]
   },
   "openSource": {
     "detected": false,

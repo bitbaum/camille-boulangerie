@@ -21,7 +21,7 @@ test('the whole site validates against the sitekit schema', () => {
 
 test('every nav item resolves to a page that exists', () => {
   const pages = sitePages();
-  const paths = new Set(pages.map(p => p.path));
+  const paths = new Set(pages.map((p) => p.path));
   for (const item of siteNavItems(pages)) {
     assert.ok(paths.has(item.path), `nav points at missing page '${item.path}'`);
   }
@@ -29,7 +29,7 @@ test('every nav item resolves to a page that exists', () => {
 
 test('every non-fragment hero action resolves to a page that exists', () => {
   const pages = sitePages();
-  const paths = new Set(pages.map(p => (p.path ? `/${p.path}` : '/')));
+  const paths = new Set(pages.map((p) => (p.path ? `/${p.path}` : '/')));
   for (const page of pages) {
     for (const section of page.sections) {
       if (section.kind !== 'hero' || !section.actions) continue;

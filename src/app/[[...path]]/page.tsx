@@ -17,7 +17,7 @@ interface RouteParams {
  * silently go missing as the site is edited.
  */
 export function generateStaticParams(): Array<{ path?: string[] }> {
-  return sitePages().map(page => ({ path: page.path ? [page.path] : [] }));
+  return sitePages().map((page) => ({ path: page.path ? [page.path] : [] }));
 }
 
 export async function generateMetadata({ params }: RouteParams): Promise<Metadata> {
