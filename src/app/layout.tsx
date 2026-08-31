@@ -24,15 +24,13 @@ export const metadata: Metadata = {
     default: `${chrome.name} — ${chrome.tagline} · Zürich`,
     template: `%s · ${chrome.name}`,
   },
-  description:
-    'Französische Boulangerie am Limmatquai — OrangeCat Site Factory Demo (fiktiv).',
+  description: 'Französische Boulangerie am Limmatquai — OrangeCat Site Factory Demo (fiktiv).',
   // openGraph is what LinkedIn, WhatsApp and Slack read. Without it they fall
   // back to guessing, and a demo shown to a prospect previews as a bare link.
   // noindex above is about SEARCH, which is a different question from sharing.
   openGraph: {
     title: `${chrome.name} — ${chrome.tagline} · Zürich`,
-    description:
-      'Französische Boulangerie am Limmatquai — OrangeCat Site Factory Demo (fiktiv).',
+    description: 'Französische Boulangerie am Limmatquai — OrangeCat Site Factory Demo (fiktiv).',
     type: 'website',
     locale: 'de_CH',
   },
