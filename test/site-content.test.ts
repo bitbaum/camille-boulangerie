@@ -12,11 +12,9 @@ import { siteChrome, sitePages } from '../src/config/site-content';
 
 test('the whole site validates against the sitekit schema', () => {
   const result = validateSite({ chrome: siteChrome(), pages: sitePages() });
-  assert.equal(
-    result.success,
-    true,
-    result.success ? undefined : `schema violations:\n${result.errors.join('\n')}`,
-  );
+  if (!result.success) {
+    assert.fail(`schema violations:\n${result.errors.join('\n')}`);
+  }
 });
 
 test('every nav item resolves to a page that exists', () => {
