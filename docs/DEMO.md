@@ -30,8 +30,8 @@ A **fictional** French bakery in Zurich, built end-to-end through the OrangeCat 
 ## Commands
 
 ```bash
-npm run dev          # local
-npm run verify       # lint + typecheck + build
+pnpm run dev          # local
+pnpm run verify       # lint + typecheck + build
 # Deploy via fleetcrown:
 bash /home/g/dev/fleetcrown/scripts/hetzner/deploy.sh camille-boulangerie
 ```

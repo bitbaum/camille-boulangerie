@@ -34,8 +34,8 @@ Clean-room test — cloned with no access to the original working copy, no
 `node_modules`, no env file:
 
 ```
-npm ci        ✓
-npm run build ✓   4 pages, all static
+pnpm install --frozen-lockfile        ✓
+pnpm run build ✓   4 pages, all static
 npx next start ✓  HTTP 200
 ```
 
