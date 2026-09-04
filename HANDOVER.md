@@ -20,7 +20,8 @@ it existed. Fixed: registered.
 **3. It carries 2 high-severity vulnerabilities.** Next 14.2.35; the fleet
 standard is 16.2.4. Handing a paying client a site with known highs is not
 acceptable — **upgrade before any real handover**, and treat "dependencies
-current" as part of the deliverable, not hygiene.
+current" as part of the deliverable, not hygiene. *(Done since: the site was
+rebuilt on sitekit on 2026-08-28 and is on Next 16.2.4.)*
 
 **4. The content is not the client's to receive.** This site was generated from
 a scrape of `juliette-boulangerie.ch` and pseudonymised. That is fine for a
@@ -36,7 +37,7 @@ Clean-room test — cloned with no access to the original working copy, no
 ```
 pnpm install --frozen-lockfile        ✓
 pnpm run build ✓   4 pages, all static
-npx next start ✓  HTTP 200
+pnpm exec next start ✓  HTTP 200
 ```
 
 **The repository is portable by construction.** It depends on nothing of ours:
