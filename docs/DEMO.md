@@ -1,8 +1,8 @@
 # Camille — OrangeCat Site Factory demo
 
 **created_date:** 2026-08-20  
-**last_modified_date:** 2026-08-20  
-**last_modified_summary:** Live demo prospect — pseudonymous bakery from scraped reference site.
+**last_modified_date:** 2026-09-04  
+**last_modified_summary:** Docs truth-sweep — content SSOT path, verify contents, deploy flow.
 
 ---
 
@@ -14,7 +14,7 @@ A **fictional** French bakery in Zurich, built end-to-end through the OrangeCat 
 |------|----------|
 | 1. Import | `imports/source-manifest.json` (scraped from public juliette-boulangerie.ch) |
 | 2. Transform | Pseudonym **Camille Rousseau**, brand **Camille — pain du Quai** |
-| 3. Build | Next.js marketing site, content SSOT in `src/lib/content/site.ts` |
+| 3. Build | Next.js marketing site, content SSOT in `src/config/site-content.ts` |
 | 4. Host | `camille.orangecat.ch` on bitbaum |
 
 **Not a real business.** All addresses, phones, and emails are fake (+41 44 000 …). Demo banner on every page.
@@ -31,8 +31,9 @@ A **fictional** French bakery in Zurich, built end-to-end through the OrangeCat 
 
 ```bash
 pnpm run dev          # local
-pnpm run verify       # lint + typecheck + build
-# Deploy via fleetcrown:
+pnpm run verify       # format check + typecheck + lint + tests
+# Deploy: push to main — .github/workflows/deploy.yml deploys to bitbaum
+# via fleetcrown's selfhost-deploy.yml. Manual fallback:
 bash /home/g/dev/fleetcrown/scripts/hetzner/deploy.sh camille-boulangerie
 ```
 
