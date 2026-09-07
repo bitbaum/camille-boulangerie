@@ -68,7 +68,6 @@ jobs:
             nextjs-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}-
             nextjs-${{ runner.os }}-
 
-
       # SSOT: "verified" is defined ONCE, in package.json `verify`
       # (= type-check + lint + test). Lint is real now — the Next 16 upgrade
       # this file's old comment was waiting for happened on 2026-08-28.
