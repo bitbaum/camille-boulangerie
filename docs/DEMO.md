@@ -33,8 +33,8 @@ A **fictional** French bakery in Zurich, built end-to-end through the OrangeCat 
 pnpm run dev          # local
 pnpm run verify       # format check + typecheck + lint + tests
 # Deploy: push to main — .github/workflows/deploy.yml deploys to bitbaum
-# via fleetcrown's selfhost-deploy.yml. Manual fallback:
-bash /home/g/dev/fleetcrown/scripts/hetzner/deploy.sh camille-boulangerie
+# via loki's selfhost-deploy.yml. Manual fallback:
+bash /home/g/dev/loki/scripts/hetzner/deploy.sh camille-boulangerie
 ```
 
 ---
