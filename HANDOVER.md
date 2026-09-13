@@ -14,7 +14,7 @@ handover was impossible for the one site that exists to demonstrate handover.
 Fixed: committed as-is, pushed to `bitbaum/camille-boulangerie`.
 
 **2. It was not in the register.** Running on port 4020 behind a Caddy block,
-absent from `fleetcrown/scripts/hetzner/apps.conf`. Nothing would have told you
+absent from `loki/scripts/hetzner/apps.conf`. Nothing would have told you
 it existed. Fixed: registered.
 
 **3. It carries 2 high-severity vulnerabilities.** Next 14.2.35; the fleet
@@ -43,7 +43,7 @@ pnpm exec next start ✓  HTTP 200
 **The repository is portable by construction.** It depends on nothing of ours:
 no bitbaum path, no Caddy assumption, no shared package, no secret. The only
 env var is a public URL. That is not luck — it is because deploy logic lives in
-`fleetcrown`, not in the app repo, so an app repo is an ordinary Next app.
+`loki`, not in the app repo, so an app repo is an ordinary Next app.
 
 ## The procedure
 
@@ -68,7 +68,7 @@ env var is a public URL. That is not luck — it is because deploy logic lives i
 
 ## What they are giving up
 
-The FleetCrown widget — the reason changes are a button rather than an email.
+The Loki widget — the reason changes are a button rather than an email.
 Transferring the code and keeping the service is the normal case, and worth
 saying out loud when offering the exit: **the exit is what makes the service
 trustworthy, not what makes it optional.**
