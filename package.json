@@ -19,9 +19,9 @@
     "format:check": "prettier --check ."
   },
   "dependencies": {
-    "next": "16.4.0",
-    "react": "19.3.0",
-    "react-dom": "19.3.0",
+    "next": "16.4.1",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
     "sitekit": "npm:@bitbaum/sitekit@^0.3.0"
   },
   "devDependencies": {
@@ -30,9 +30,9 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^10",
-    "eslint-config-next": "^16.4.0",
+    "eslint-config-next": "^16.4.1",
     "espree": "^11.2.0",
-    "prettier": "3.9.9",
+    "prettier": "3.9.10",
     "tailwindcss": "^4",
     "tsx": "^4.23.15",
     "typescript": "^6.0.3"
