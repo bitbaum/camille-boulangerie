@@ -19,7 +19,7 @@
     "format:check": "prettier --check ."
   },
   "dependencies": {
-    "next": "16.4.1",
+    "next": "16.4.2",
     "react": "19.3.1",
     "react-dom": "19.3.1",
     "sitekit": "npm:@bitbaum/sitekit@^0.3.0"
@@ -30,7 +30,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^10",
-    "eslint-config-next": "^16.4.1",
+    "eslint-config-next": "^16.4.2",
     "espree": "^11.2.0",
     "prettier": "3.9.10",
     "tailwindcss": "^4",
