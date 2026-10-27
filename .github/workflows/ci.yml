@@ -78,3 +78,7 @@ jobs:
       # bad config surfaces here and nowhere earlier.
       - name: Build
         run: pnpm run build
+
+      # Receipt generation requires the built source to match the checked-out commit.
+      - name: Check build source reproducibility
+        run: git diff --exit-code HEAD --
