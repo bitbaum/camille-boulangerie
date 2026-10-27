@@ -3,3 +3,6 @@ node_modules
 out
 .env*.local
 !.env.selfhost.local.example
+
+# Incremental compiler caches are generated on every typecheck/build.
+*.tsbuildinfo
