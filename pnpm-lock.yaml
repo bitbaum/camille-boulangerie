@@ -18,8 +18,8 @@ importers:
         specifier: 19.3.1
         version: 19.3.1(react@19.3.1)
       sitekit:
-        specifier: npm:@bitbaum/sitekit@^0.4.2
-        version: '@bitbaum/sitekit@0.4.2(react@19.3.1)'
+        specifier: npm:@bitbaum/sitekit@^0.5.0
+        version: '@bitbaum/sitekit@0.5.0(react@19.3.1)'
     devDependencies:
       '@tailwindcss/postcss':
         specifier: ^4
@@ -128,8 +128,8 @@ packages:
     resolution: {integrity: sha512-Vj1jF3cPfxg7OAfoI7QnVKLoILlm2JF9pnVHrX8qx7AHMiYWT+NDAA7jChlNgRS4WTLc/fD1lXLmPixluj+3Gg==}
     engines: {node: '>=6.9.0'}
 
-  '@bitbaum/sitekit@0.4.2':
-    resolution: {integrity: sha512-Q8MsZcn8w1ljvrsQrOvTisC+nGzVpNX+ZcChzIGXCDLy3yRzU0HuhGD9c1YuH7gBz/HXgYXPDRPJT5UZ0B2lBg==}
+  '@bitbaum/sitekit@0.5.0':
+    resolution: {integrity: sha512-73t+j8cYrxQzjMfwSmJJHp/1zHpfK4sUQvPgKaWYpLPEv4aqXudPeGzrIQHMBqCjQqLA6IxOSPT8/BEOfIWaRA==}
     engines: {node: '>=20'}
     peerDependencies:
       react: '>=18'
@@ -2266,7 +2266,7 @@ snapshots:
       '@babel/helper-string-parser': 7.29.7
       '@babel/helper-validator-identifier': 7.29.7
 
-  '@bitbaum/sitekit@0.4.2(react@19.3.1)':
+  '@bitbaum/sitekit@0.5.0(react@19.3.1)':
     dependencies:
       react: 19.3.1
       zod: 4.6.7
