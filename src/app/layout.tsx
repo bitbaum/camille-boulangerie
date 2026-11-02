@@ -1,21 +1,10 @@
 import type { Metadata } from 'next';
 import Script from 'next/script';
-import { Cormorant_Garamond, DM_Sans } from 'next/font/google';
 import './globals.css';
 import { DemoBanner } from '@/components/DemoBanner';
 import { siteChrome } from '@/config/site-content';
-
-const display = Cormorant_Garamond({
-  subsets: ['latin'],
-  weight: ['500', '600', '700'],
-  variable: '--font-display',
-});
-
-const body = DM_Sans({
-  subsets: ['latin'],
-  weight: ['400', '500', '600'],
-  variable: '--font-body',
-});
+// Cormorant Garamond and DM Sans ship in @bitbaum/design-tokens; ./fonts is generated from it.
+import { body, display } from './fonts';
 
 const chrome = siteChrome();
 
